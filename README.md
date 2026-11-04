@@ -87,7 +87,29 @@ Connect your two laptops directly with an Ethernet cable.
 
 ---
 
-### Step 2: Start the Screen
+### How to Use the New Software
+
+#### On Your HP Pavilion (Host):
+```bash
+cd /home/sudo69/Projects/Project-Arch-Elementary
+./scripts/start-host.sh
+
+# Or using the CLI:
+python3 dual_monitor/cli.py host
+```
+
+#### On Your Dell Vostro (Client):
+Pull the repository on your Dell Vostro:
+```bash
+git clone https://github.com/talpadeavi03/dual-monitor.git
+cd dual-monitor
+sudo ./install.sh
+dual-monitor client
+```
+
+---
+
+### Step 2: Start the Screen (CLI Overview)
 
 * **On Host (Primary Laptop):**
   ```bash
