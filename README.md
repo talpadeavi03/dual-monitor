@@ -129,6 +129,28 @@ dual-monitor client
 
 ---
 
+### 🔄 Making It Permanent Across Reboots (Never Type Commands Again!)
+
+By default, Linux wipes temporary IP assignments when rebooted. Run these automated setup scripts **once** on each machine to make everything permanent:
+
+#### On HP Pavilion (Host):
+```bash
+./scripts/setup-host-permanent.sh
+```
+* Configures permanent auto-DHCP on your Ethernet cable (`192.168.99.1`).
+* Enables the systemd user service `dual-monitor-host.service` so the virtual screen and stream launch automatically on boot.
+
+#### On Dell Vostro (Client):
+```bash
+./scripts/setup-client-permanent.sh
+```
+* Saves the Ethernet IP (`192.168.99.2`) permanently in NetworkManager with `autoconnect=yes`.
+* Enables the systemd user service `dual-monitor-client.service` so the full-screen display opens automatically on boot.
+
+Once both are set up, **simply plug in the Ethernet cable and turn on both laptops—the extended screen connects automatically with zero commands needed!**
+
+---
+
 ## 🎮 Client Controls & Shortcuts
 
 | Key | Action |
