@@ -6,8 +6,8 @@ Dual-Monitor CLI: Main entry point for the dual-monitor software suite.
 import sys
 import os
 
-# Ensure package can be imported when running script directly
-script_dir = os.path.dirname(os.path.abspath(__file__))
+# Ensure package can be imported when running script directly or via symlink
+script_dir = os.path.dirname(os.path.realpath(__file__))
 parent_dir = os.path.dirname(script_dir)
 if parent_dir not in sys.path:
     sys.path.insert(0, parent_dir)
