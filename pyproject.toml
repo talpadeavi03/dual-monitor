@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dual-monitor"
+version = "0.1.0"
+description = "Ultra-low-latency bare-metal secondary screen over direct Ethernet/LAN for Linux"
+readme = "README.md"
+authors = [
+    { name = "Avinash Talpade", email = "talpadeavi0303@gmail.com" }
+]
+license = { text = "MIT" }
+keywords = ["dual-monitor", "wayland", "pipewire", "gstreamer", "ethernet", "second-screen", "bare-metal"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Graphics :: Display",
+    "Topic :: System :: Networking"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "PyGObject>=3.36.0"
+]
+
+[project.scripts]
+dual-monitor = "dual_monitor.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/talpadeavi03/dual-monitor"
+Repository = "https://github.com/talpadeavi03/dual-monitor.git"
+Issues = "https://github.com/talpadeavi03/dual-monitor/issues"

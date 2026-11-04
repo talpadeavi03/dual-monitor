@@ -1,0 +1,13 @@
+[Unit]
+Description=Dual-Monitor Client Service
+After=graphical-session.target network.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dual-monitor client
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target
